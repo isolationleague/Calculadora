@@ -128,6 +128,15 @@ public class ModeloCalculadora {
   }
 
     /**
+     *
+     */
+    public Integer mcm () {
+        beta();
+        oprAltPrio = '$';
+        return new Integer(y);
+    }
+
+    /**
      * 
      * @PRE El estado es valido.
      * @POS ( z = x oprBajPrio ( y oprAltPrio z ) ) Y ( reinicia estado )
@@ -180,7 +189,12 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
+  if (oprAltPrio == '$' ) y = calculeMCM();
   z = 0;
+ }
+
+ private int calculeMCM() {
+     return (y * z) / calculeMCD();
  }
 
   private int calculeMCD() {
