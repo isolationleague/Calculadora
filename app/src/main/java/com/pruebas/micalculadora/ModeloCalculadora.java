@@ -212,7 +212,7 @@ public class ModeloCalculadora {
         int mayor = maxYZ();
         int resto = mayor % menor;
 
-        return menor;
+        return resto;
     }
 
   private int minYZ(){
