@@ -127,6 +127,12 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+    public Integer mod () {
+        beta();
+        oprAltPrio = '%';
+        return new Integer(y);
+    }
+
     /**
      * 
      * @PRE El estado es valido.
@@ -180,6 +186,7 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
+  if ( oprAltPrio == '%' ) y = calculeMOD();
   z = 0;
  }
 
@@ -199,6 +206,14 @@ public class ModeloCalculadora {
     };
     return menor;
   }
+
+    private int calculeMOD() {
+        int menor = minYZ();
+        int mayor = maxYZ();
+        int resto = mayor % menor;
+
+        return menor;
+    }
 
   private int minYZ(){
     if ( y < z )
