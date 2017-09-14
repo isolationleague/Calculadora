@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private ModeloCalculadora modeloCalculadora;
@@ -95,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "9":
                 resultadoCalculadora = modeloCalculadora.digito(9);
+                break;
+            case "SUM":
+                resultadoCalculadora = modeloCalculadora.sumatoria();
                 break;
         }
         resultadoTexto.setText(resultadoCalculadora.toString());
