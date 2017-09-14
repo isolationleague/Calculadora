@@ -164,6 +164,10 @@ public class ModeloCalculadora {
     z = 0;
     return new Integer(z);
  }
+ public Integer exp(){
+     beta2();
+     return new Integer(y);
+ }
 
  private void omega () {
   beta(); // Va de primero porque procesa el operador del grupo de alta prioridad pendiente.
@@ -182,6 +186,11 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '&' ) y = calculeMCD();
   z = 0;
  }
+
+    private void beta2 () {
+        y = (int) (Math.pow(y,z));
+        z = 0;
+    }
 
   private int calculeMCD() {
     int menor = minYZ();
