@@ -4,7 +4,7 @@
  * Created on 20 de febrero de 2007, 12:32
  *
  */
-
+/// PRUEBA DE PUSH
 package com.pruebas.micalculadora;
 /**
  *
@@ -99,6 +99,10 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+  public Integer exp() {
+        beta2();
+      return new Integer(y);
+    }
     /**
      * 
      * @PRE El estado es valido.
@@ -182,6 +186,11 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '&' ) y = calculeMCD();
   z = 0;
  }
+
+    private void beta2 () {
+        y = (int)(Math.pow(y,z));
+        z = 0;
+    }
 
   private int calculeMCD() {
     int menor = minYZ();
