@@ -208,9 +208,7 @@ public class ModeloCalculadora {
   }
 
     private int calculeMOD() {
-        int menor = minYZ();
-        int mayor = maxYZ();
-        int resto = mayor % menor;
+        int resto = y % z;
 
         return resto;
     }
