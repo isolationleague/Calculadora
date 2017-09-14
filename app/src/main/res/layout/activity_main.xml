@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:columnCount="4"
-        android:rowCount="5">
+        android:rowCount="6">
 
         <Button
             android:id="@+id/mcd"
@@ -57,6 +57,33 @@
             android:layout_height="wrap_content"
             android:onClick="botonClicado"
             android:text="C" />
+        <Button
+            android:id="@+id/mcm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="MCM" />
+
+        <Button
+            android:id="@+id/mod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="MOD" />
+
+        <Button
+            android:id="@+id/exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="EXP" />
+
+        <Button
+            android:id="@+id/sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="botonClicado"
+            android:text="SUM" />
 
         <Button
             android:id="@+id/siete"
