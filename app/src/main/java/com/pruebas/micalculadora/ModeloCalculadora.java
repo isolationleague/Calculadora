@@ -127,6 +127,12 @@ public class ModeloCalculadora {
     return new Integer(y);
   }
 
+    public Integer mod () {
+        beta();
+        oprAltPrio = '%';
+        return new Integer(y);
+    }
+
     /**
      *
      */
@@ -189,7 +195,11 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
+
+  if ( oprAltPrio == '%' ) y = calculeMOD();
+
   if (oprAltPrio == '$' ) y = calculeMCM();
+
   z = 0;
  }
 
@@ -230,6 +240,12 @@ public class ModeloCalculadora {
     };
     return menor;
   }
+
+    private int calculeMOD() {
+        int resto = y % z;
+
+        return resto;
+    }
 
   private int minYZ(){
     if ( y < z )
