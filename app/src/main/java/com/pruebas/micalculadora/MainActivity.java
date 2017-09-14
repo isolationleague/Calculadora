@@ -40,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
                 modeloCalculadora.limpiarTodo();
                 resultadoCalculadora = 0;
                 break;
+            case "mcm":
+                resultadoCalculadora = modeloCalculadora.mcm();
+                break;
+            case "mod":
+                resultadoCalculadora = modeloCalculadora.mod();
+                break;
+            case "exp":
+                resultadoCalculadora = modeloCalculadora.exp();
+                break;
+            case "sum":
+                resultadoCalculadora = modeloCalculadora.sum();
+                break;
             case "=":
                 resultadoCalculadora = modeloCalculadora.cerrar();
                 break;
