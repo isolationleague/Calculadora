@@ -187,8 +187,10 @@ public class ModeloCalculadora {
   z = 0;
  }
 
+ // Se encarga de exp()
     private void beta2 () {
         y = (int)(Math.pow(y,z));
+
         z = 0;
     }
 
