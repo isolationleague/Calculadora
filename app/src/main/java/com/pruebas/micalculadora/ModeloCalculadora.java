@@ -134,6 +134,15 @@ public class ModeloCalculadora {
     }
 
     /**
+     *
+     */
+    public Integer mcm () {
+        beta();
+        oprAltPrio = '$';
+        return new Integer(y);
+    }
+
+    /**
      * 
      * @PRE El estado es valido.
      * @POS ( z = x oprBajPrio ( y oprAltPrio z ) ) Y ( reinicia estado )
@@ -186,9 +195,34 @@ public class ModeloCalculadora {
   if ( oprAltPrio == '*' ) y = y * z;
   if ( oprAltPrio == '/' ) y = y / z;
   if ( oprAltPrio == '&' ) y = calculeMCD();
+
   if ( oprAltPrio == '%' ) y = calculeMOD();
+
+  if (oprAltPrio == '$' ) y = calculeMCM();
+
   z = 0;
  }
+
+
+ private int calculeMCM() {
+     return (y * z) / calculeMCD();
+ }
+
+
+ public int sumatoria(){
+     omega();
+
+     int a=x;
+     int result=0;
+     for(int i=0;i<=a;++i){
+         result+=i;
+     }
+     x=result;
+     oprBajPrio = '+';
+     oprAltPrio = '*';
+     return new Integer(x);
+ }
+
 
   private int calculeMCD() {
     int menor = minYZ();
