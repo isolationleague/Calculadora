@@ -85,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
             case "9":
                 resultadoCalculadora = modeloCalculadora.digito(9);
                 break;
+            case "SUM":
+                resultadoCalculadora = modeloCalculadora.sumatoria();
+                break;
         }
         resultadoTexto.setText(resultadoCalculadora.toString());
     }

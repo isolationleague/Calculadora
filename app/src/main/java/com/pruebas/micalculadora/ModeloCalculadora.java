@@ -193,9 +193,26 @@ public class ModeloCalculadora {
   z = 0;
  }
 
+
  private int calculeMCM() {
      return (y * z) / calculeMCD();
  }
+
+
+ public int sumatoria(){
+     omega();
+
+     int a=x;
+     int result=0;
+     for(int i=0;i<=a;++i){
+         result+=i;
+     }
+     x=result;
+     oprBajPrio = '+';
+     oprAltPrio = '*';
+     return new Integer(x);
+ }
+
 
   private int calculeMCD() {
     int menor = minYZ();

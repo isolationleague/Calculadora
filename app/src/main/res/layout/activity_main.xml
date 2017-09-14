@@ -169,5 +169,14 @@
             android:layout_height="wrap_content"
             android:onClick="botonClicado"
             android:text="/" />
+
+        <Button
+            android:id="@+id/sumbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="botonClicado"
+            android:text="SUM" />
     </GridLayout>
+
 </LinearLayout>
